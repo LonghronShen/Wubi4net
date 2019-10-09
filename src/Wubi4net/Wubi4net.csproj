@@ -1,0 +1,55 @@
+﻿<Project Sdk="MSBuild.Sdk.Extras">
+
+  <PropertyGroup>
+    <Description>Wubi4net can help you convert 中文 to wubi.</Description>
+    <AssemblyTitle>Wubi4net.Core</AssemblyTitle>
+    <VersionPrefix>1.0.0</VersionPrefix>
+    <Authors>LonghronShen</Authors>
+    <TargetFrameworks>netstandard1.0;net20;net35;portable-net45+win8+wpa81;portable-net403+sl5+win8+wpa81+wp8</TargetFrameworks>
+    <AssemblyName>Wubi4net</AssemblyName>
+    <PackageId>Wubi4net-Portable</PackageId>
+    <PackageTags>Wubi4net wubi pcl .net core</PackageTags>
+    <PackageProjectUrl>https://github.com/LonghronShen/Wubi4net</PackageProjectUrl>
+    <PackageLicenseUrl>https://raw.githubusercontent.com/LonghronShen/Wubi4net/master/LICENSE</PackageLicenseUrl>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/LonghronShen/Wubi4net</RepositoryUrl>
+    <GenerateAssemblyTitleAttribute>false</GenerateAssemblyTitleAttribute>
+    <GenerateAssemblyDescriptionAttribute>false</GenerateAssemblyDescriptionAttribute>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+    <GenerateAssemblyCopyrightAttribute>false</GenerateAssemblyCopyrightAttribute>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <LangVersion>preview</LangVersion>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'portable-net45+win8+wpa81' ">
+    <DefineConstants>$(DefineConstants);PORTABLE;PROFILE111</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'portable-net403+sl5+win8+wpa81+wp8' ">
+    <DefineConstants>$(DefineConstants);PORTABLE;PROFILE336</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net20' ">
+    <PackageReference Include="Theraot.Core" Version="3.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
+  </ItemGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net20' ">
+    <PackageReference Include="Theraot.Core" Version="3.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\unicode_wubi_86.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\unicode_wubi_86.txt" />
+  </ItemGroup>
+
+</Project>

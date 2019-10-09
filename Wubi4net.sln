@@ -1,0 +1,47 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29209.152
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{005EBE5D-58CD-4FF3-9BF5-DF7FBDBEA41D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{546248E3-CEA1-4D35-A075-DD39438244FA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7C05D50F-C7F9-4109-89E4-05336719DBF6}"
+	ProjectSection(SolutionItems) = preProject
+		appveyor.yml = appveyor.yml
+		global.json = global.json
+		LICENSE = LICENSE
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wubi4net", "src\Wubi4net\Wubi4net.csproj", "{27F42A29-81EA-46C6-893D-144865B213C8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wubi4net.Tests", "test\Wubi4net.Tests\Wubi4net.Tests.csproj", "{1FA45FE6-E729-4CC5-8E9A-54C95F8834F3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{27F42A29-81EA-46C6-893D-144865B213C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27F42A29-81EA-46C6-893D-144865B213C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27F42A29-81EA-46C6-893D-144865B213C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27F42A29-81EA-46C6-893D-144865B213C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1FA45FE6-E729-4CC5-8E9A-54C95F8834F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FA45FE6-E729-4CC5-8E9A-54C95F8834F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FA45FE6-E729-4CC5-8E9A-54C95F8834F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FA45FE6-E729-4CC5-8E9A-54C95F8834F3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{27F42A29-81EA-46C6-893D-144865B213C8} = {005EBE5D-58CD-4FF3-9BF5-DF7FBDBEA41D}
+		{1FA45FE6-E729-4CC5-8E9A-54C95F8834F3} = {546248E3-CEA1-4D35-A075-DD39438244FA}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A125A1FD-E50F-487A-A89D-F6E74F0E6226}
+	EndGlobalSection
+EndGlobal
